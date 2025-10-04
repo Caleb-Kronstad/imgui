@@ -1,9 +1,10 @@
 project "IMGUI"
+    location "../../../Build/Build-Files"
     kind "StaticLib"
     language "C++"
 
-    targetdir ("../../../bin/" .. OutputDir .. "/%{prj.name}")
-    objdir ("../../../bin-int/" .. OutputDir .. "/%{prj.name}")
+    targetdir ("../../../Build/Binaries/" .. OutputDir .. "/%{prj.name}")
+    objdir ("../../../Build/Binaries-Intermediate/" .. OutputDir .. "/%{prj.name}")
 
     includedirs {
         "%{IncludeDir.IMGUI}",
